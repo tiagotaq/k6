@@ -19,7 +19,7 @@ jobs:
           path: scripts/test.js
       
       - name: Move report file
-        run: ls & mkdir report & mv index.htmpl report
+        run: ls & mkdir report & mv index.html report
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
