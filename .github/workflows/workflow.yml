@@ -17,3 +17,12 @@ jobs:
         uses: grafana/run-k6-action@v1
         with:
           path: scripts/test.js
+      
+      - name: Move report file
+      - run: ls & mkdir report & mv index.htmpl report
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: relatório do teste
+          path: report
