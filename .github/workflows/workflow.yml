@@ -7,7 +7,7 @@ jobs:
   run-test:
     runs-on: ubuntu-latest
     steps:
-      - name: step 1 - checkout
+      - name: Checkout
         uses: actions/checkout@v4
 
       - name: Setup K6
@@ -19,7 +19,7 @@ jobs:
           path: scripts/test.js
       
       - name: Move report file
-      - run: ls & mkdir report & mv index.htmpl report
+        run: ls & mkdir report & mv index.htmpl report
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
